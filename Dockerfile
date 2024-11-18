@@ -1,5 +1,5 @@
-# 指定下载 python 版本，说明该镜像以哪个镜像为基础
-FROM python:3.8.5
+# 说明该镜像以哪个镜像为基础
+FROM alibaba-cloud-linux-3-registry.cn-hangzhou.cr.aliyuncs.com/alinux3/python
 # 构建者的基本信息
 MAINTAINER changjin
 # 创建 app 文件夹
