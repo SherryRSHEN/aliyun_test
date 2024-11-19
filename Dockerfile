@@ -7,7 +7,7 @@ RUN mkdir -p /app
 # 进入 app 目录
 RUN cd /app
 # 在容器内部执行的命令
-RUN python -m ensurepip --upgrage
+RUN apt-get install -y python3-pip
 RUN pip install flask 
 # 将 linux 系统当前目录下的内容拷贝到容器的 /app 目录下
 ADD . /app
