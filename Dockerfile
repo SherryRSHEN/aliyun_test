@@ -2,13 +2,14 @@
 FROM alibaba-cloud-linux-3-registry.cn-hangzhou.cr.aliyuncs.com/alinux3/python
 # 构建者的基本信息
 MAINTAINER changjin
+# 在容器内部执行的命令
+RUN yum -y install python3-pip
+RUN pip install flask 
+
 # 创建 app 文件夹
 RUN mkdir -p /app
 # 进入 app 目录
 RUN cd /app
-# 在容器内部执行的命令
-RUN apt-get install -y python3-pip
-RUN pip install flask 
 # 将 linux 系统当前目录下的内容拷贝到容器的 /app 目录下
 ADD . /app
 # 暴露 8000 端口
