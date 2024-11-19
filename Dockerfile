@@ -4,7 +4,7 @@ FROM alibaba-cloud-linux-3-registry.cn-hangzhou.cr.aliyuncs.com/alinux3/python
 MAINTAINER changjin
 # 在容器内部执行的命令
 RUN yum -y install python3-pip
-RUN pip install flask 
+RUN pip3 install flask 
 
 # 创建 app 文件夹
 RUN mkdir -p /app
