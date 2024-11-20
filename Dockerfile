@@ -13,7 +13,8 @@ RUN mkdir -p /app
 # 进入 app 目录
 RUN cd /app
 # 将 linux 系统当前目录下的内容拷贝到容器的 /app 目录下
-ADD . /app
+COPY app.py /app/
+# ADD . /app
 # 暴露 8000 端口
 EXPOSE 8000
 # 将 app 文件夹为工作目录
